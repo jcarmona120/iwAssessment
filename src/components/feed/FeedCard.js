@@ -6,7 +6,9 @@ const FeedCard = (props) => {
 
     return (
         <div className="feedCard">
-            <img src={`https://salty-ridge-25970.herokuapp.com${props.thumbnail}`} alt="" className="feedCard__image" />
+            <div className="feedCard__imageContainer">
+                <img src={`https://salty-ridge-25970.herokuapp.com${props.thumbnail}`} alt="" className="feedCard__image" />
+            </div>
             <div class="feedCard__caption">
                 <p className="feedCard__published">{props.published}</p>
                 <h2 className="feedCard__title">{props.title}</h2>

@@ -40,6 +40,19 @@ a {
 
 
 /*********************
+EXTENDS
+*********************/
+
+%link-hover {
+  &:hover {
+    color: white;
+    background-color: gray;
+    border-bottom: 0;
+  }
+}
+
+
+/*********************
 BREAKPOINTS
 *********************/
 
@@ -150,9 +163,7 @@ BREAKPOINTS
       display: none;
     }
 
-    &:hover {
-      border-bottom: 1px solid black;
-    }
+    @extend %link-hover;
   }
 
   &__number {
@@ -430,6 +441,10 @@ BREAKPOINTS
     width: 37%;
   } 
 
+  &__imageContainer {
+    overflow: hidden;
+  }
+
   &__image {
     width: 100%;
 
@@ -482,11 +497,7 @@ BREAKPOINTS
     padding-bottom: .2rem;
     font-size: 1.3rem;
 
-    &:hover {
-      color: white;
-      background-color: gray;
-      border-bottom: 0;
-    }
+    @extend %link-hover;
 
     @include breakpoint('mobileonly') {
       font-size: 1.1rem;
@@ -509,9 +520,9 @@ BREAKPOINTS
 
   &__link {
     text-transform: uppercase;
-    
-    
     border-bottom: 1px solid black;
+
+    @extend %link-hover;
   }
 
   & > span {
