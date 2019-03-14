@@ -62,8 +62,6 @@ class App extends Component {
   }
 
   movingFinger = (e) => {
-		console.log(e)
-		console.log(e.touches[0].pageX, 'start')
 		this.setState({
 			startingPoint: e.touches[0].pageX
 		})
@@ -71,7 +69,6 @@ class App extends Component {
 	
 	touchedFinger = (e) => {
 		console.log(e.touches[0].clientX, 'moving')
-		
 	}
 	
 	endFinger = (e) => {
@@ -84,15 +81,18 @@ class App extends Component {
 		})
 		
 		if (this.state.distance > 150) {
-      console.log('swipe right');
       this.setState({
         counter: this.state.counter + 1
       })
 		} else if (this.state.distance < -150) {
-      console.log('swipe left');
       this.setState({
         counter: this.state.counter - 1 
       })
+      if (this.state.counter === -1) {
+        this.setState({
+          counter: this.state.counter.length - 1
+        })
+      }
 		}
 	}
 
