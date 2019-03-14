@@ -1,7 +1,5 @@
 import React from 'react';
-import HeroImage from './herolanding.png';
 import HeroCard from '../hero/HeroCard';
-import HeroDots from './HeroDots';
 
 const Hero = (props) => {
     var slideNumber = props.slideNumber

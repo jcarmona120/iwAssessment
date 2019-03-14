@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
-import styled from 'styled-components'
-import HeroImage from './herolanding.png';
+import styled from 'styled-components';
 
 const Caption = styled.div`
     position: absolute;
@@ -10,6 +9,7 @@ const Caption = styled.div`
     z-index: 2;
     text-align: left;
     transform: translate(0%, -15%);
+    animation: 2s enter;
 
     @media (min-width: 85em) {
         width: 85%;
@@ -18,6 +18,28 @@ const Caption = styled.div`
 const ListItem = styled.li`
    height: 50rem;
    width: 100%;
+
+   @keyframes enter {
+       0% {
+           opacity: 0;
+       }
+
+       100% {
+           opacity: 1;
+       }
+   }
+
+   &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: .3s enter;
+  }
 
    &::after {
     content: "";
@@ -30,6 +52,9 @@ const ListItem = styled.li`
     z-index: -1; 
     background-position: top;
     background-size: cover;  
+    animation: .6s enter;
+    transition: background-image .3s ease-in;
+
 
     @media (max-width: 90em) {
         background-position: top;

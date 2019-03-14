@@ -26,7 +26,6 @@ class App extends Component {
       axios.get('https://salty-ridge-25970.herokuapp.com/heroposts', {
         mode: 'cors',
     }).then(res => {
-        console.log(res.data)
         this.setState({
             hero: res.data
         })
@@ -37,7 +36,6 @@ class App extends Component {
       axios.get('https://salty-ridge-25970.herokuapp.com/feedposts', {
         mode: 'cors',
     }).then(res => {
-        console.log(res.data)
         this.setState({
             feed: res.data
         })
@@ -86,9 +84,15 @@ class App extends Component {
 		})
 		
 		if (this.state.distance > 150) {
-			console.log('swipe right');
+      console.log('swipe right');
+      this.setState({
+        counter: this.state.counter + 1
+      })
 		} else if (this.state.distance < -150) {
       console.log('swipe left');
+      this.setState({
+        counter: this.state.counter - 1 
+      })
 		}
 	}
 
