@@ -2,7 +2,6 @@
   "name": "ideawork",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jcarmona120.github.io/ideawork",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^2.0.1",
