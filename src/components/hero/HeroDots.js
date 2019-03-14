@@ -17,7 +17,7 @@ const HeroDots = (props) => {
         <ul className="heroDots">
         {props.hero.map((slideN, index) =>
             <DotItem key={index} onClick={() => props.goToSlide(index)} slide={index} className= {
-                index == slideNumber
+                index === slideNumber
                   ? "heroDots--active"
                   : "heroDots--inactive"
               }>

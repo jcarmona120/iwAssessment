@@ -23,7 +23,7 @@ class App extends Component {
   
 
   componentWillMount() {
-      axios.get('http://localhost:1337/heroposts', {
+      axios.get('https://salty-ridge-25970.herokuapp.com/heroposts', {
         mode: 'cors',
     }).then(res => {
         console.log(res.data)
@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-      axios.get('http://localhost:1337/feedposts', {
+      axios.get('https://salty-ridge-25970.herokuapp.com/feedposts', {
         mode: 'cors',
     }).then(res => {
         console.log(res.data)

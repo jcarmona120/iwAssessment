@@ -10,7 +10,7 @@ const Hero = (props) => {
         return (
             <HeroCard 
                 title={item.event_name}
-                image={`http://localhost:1337${item.event_image.url}`}
+                image={`https://salty-ridge-25970.herokuapp.com${item.event_image.url}`}
                 date={item.event_date}
                 type={item.event_type}
                 desc={item.event_description}
